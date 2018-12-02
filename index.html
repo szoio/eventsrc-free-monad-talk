@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Droid Serif';
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      li {
+        line-height: 1.5;
+      }
+      pre {
+        font-size: 0.5
+      }
+      main {
+      }
+      .remark-code,
+      /* .remark-code { font-size: 13px }, */
+      .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .box-red {
+          text-align: center;
+          padding: 20px;
+          border: 3px solid red;
+          font-weight: bold;
+          font-style: italic;
+      }
+      img {
+          max-width: 100%;
+      }
+      .image-block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="./mermaid.min.js"></script>
+    <link rel="stylesheet" href="./mermaid.css">
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>
+      var slideshow = remark.create({
+          ratio: '4:3',
+          highlightLanguage: 'scala',
+          highlightStyle: 'xcode',
+          highlightSpans: true,
+          highlightLines: true,
+          sourceUrl: 'markdown.md',
+          countIncrementalSlides: false,
+          slideNumberFormat: ''
+      });
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
